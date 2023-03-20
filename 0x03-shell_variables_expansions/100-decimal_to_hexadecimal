@@ -1,2 +1,2 @@
 #!/bin/bash
-$((16#$DECIMAL))
+$((10#$DECIMAL))
