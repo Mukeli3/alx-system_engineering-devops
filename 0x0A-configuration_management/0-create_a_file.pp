@@ -1,8 +1,7 @@
 #!usr/bin/pup
 # Creating a file using Puppet
-file { '\etc':
-  ensure => symlink,
-  target => '/tmp/school'
+file { '/tmp/school':
+  ensure => 'present'
   group  => 'www-data'
   owner  => 'www-data'
   mode   => '0744'
