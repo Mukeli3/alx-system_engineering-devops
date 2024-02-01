@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Configure server: ('service' (init) must say that 'nginx' is not running) and a script expected to be short
-ln -sf /etc/nginx/sites-available-default /etc/nginx/sites-enabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
 kill "$(pgrep 'nginx' | head -1)"
