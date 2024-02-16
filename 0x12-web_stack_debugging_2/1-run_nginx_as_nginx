@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script configures Nginx such that (nginx runs as nginx user, listens on all active IPs on port 8080)
+
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+chmod 644 /etc/nginx/nginx.conf
+pkill apache2
+sudo -u nginx service nginx restart
