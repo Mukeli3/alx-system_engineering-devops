@@ -14,5 +14,5 @@ else
 	display_info "www.$1" "www"
 	display_info "lb-01.$1" "lb-01"
 	display_info "web-01.$1" "web-01"
-	siaplay_info "web-02.$1" "web-02"
+	display_info "web-02.$1" "web-02"
 fi
