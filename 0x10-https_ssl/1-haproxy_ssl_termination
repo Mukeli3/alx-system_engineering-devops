@@ -1,12 +1,12 @@
-frontend http_in
+frontend front_handler
 	mode http
         bind :80
         bind :443 ssl crt /etc/haproxy/certs/www.topmukeliinc.tech.pem
-        http-request redirect scheme https if !{ ssl_fc }
-        default_backend web_servers
+        default_backend backend_server
 
-backend web_servers
+backend backend_server
 	mode http
         balance roundrobin
+
         server 166301-web-01 34.229.66.68:80 check
         server 166301-web-02 54.236.56.44:80 check
