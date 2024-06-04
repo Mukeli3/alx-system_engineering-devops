@@ -20,4 +20,5 @@ def top_ten(subreddit):
         data_list = resp.json().get("data").get("children")
         for i in range(0, 10):
             print(data_list[i].get("data").get("title"))
-    print(None)
+    else:
+        print(None)
